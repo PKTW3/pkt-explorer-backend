@@ -1225,7 +1225,7 @@ const dbRollback0 = (ch, tempTable, done) => {
 // hashes should be provided in ascending order and must be the tip of the chain
 const dbRollbackTo = (ctx, newTipHeight /*:number*/, done) => {
   const e = makeE(done);
-  const ch = ctx.ch.withSession();
+  const ch = ctx.ch.withSession2();
   let hashes;
 
   const dbChain /*:Array<Tables.chain_t>*/ = [];
