@@ -45,7 +45,7 @@ and instantly accessible.
         2. `./do`
     5. Launch pktd with `./bin/pktd -ux -Px --txindex` and leave it in that window to sync
 8. make a new window, name it clickhouse-server
-    1. Launch clickhouse `docker run -it -p localhost:8123:8123 --rm --name clickhouse-server --label=disable --ulimit nofile=262144:262144 --volume=/home/explorer/clickhouse_data:/var/lib/clickhouse -e CLICKHOUSE_PASSWORD=password yandex/clickhouse-server`
+    1. Launch clickhouse `docker run -it -p localhost:8123:8123 --rm --name clickhouse-server --label=disable --ulimit nofile=262144:262144 --volume=/home/explorer/clickhouse_data:/var/lib/clickhouse -e CLICKHOUSE_PASSWORD=password clickhouse/clickhouse-server:24.5.8.10`
 9. make a new window, call it clickhouse-client
     1. launch clickhouse client `docker exec -it clickhouse-server clickhouse-client --password=password`
     2. You should see a prompt like the following `32d4f36b8fe1 :)`
